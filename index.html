@@ -15,5 +15,17 @@
       var name = document.getElementById("name").value;
       document.write("Hello, " + name); // Malicious script injection
     </script>
+
+    <!-- Fourth vulnerability -->
+    <input type="text" id="name" value="" />
+    <button onclick="greet()">Submit</button>
+    <div id="greeting"></div>
+
+    <script>
+      function greet() {
+        var name = document.getElementById("name").value;
+        document.getElementById("greeting").innerHTML = "Hello, " + name; // Vulnerable to XSS
+      }
+    </script>
   </body>
 </html>
