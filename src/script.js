@@ -6,5 +6,6 @@ document.getElementById("output").innerHTML = userInput;
 var AWS_TOKEN = "1234567890";
 
 
-variable1 = '5';
-var variable1;
+if (5 === 5) {
+  // Some code here
+}
